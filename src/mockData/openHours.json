@@ -1,10 +1,10 @@
 {
-  "Monday": {
+  "Montag": {
     "name": "Montag",
     "open": "10",
     "close": "22"
   },
-  "Tuesday": {
+  "Dienstag": {
     "name": "Dienstag",
     "open": "10",
     "close": "22",
@@ -14,27 +14,27 @@
       "close": "19"
     }
   },
-  "Wednesday": {
+  "Mittwoch": {
     "name": "Mittwoch",
     "open": "10",
     "close": "22"
   },
-  "Thursday": {
+  "Donnerstag": {
     "name": "Donnerstag",
     "open": "10",
     "close": "22"
   },
-  "Friday": {
+  "Freitag": {
     "name": "Freitag",
     "open": "10",
     "close": "22"
   },
-  "Saturday": {
+  "Samstag": {
     "name": "Samstag",
     "open": "10",
     "close": "22"
   },
-  "Sunday": {
+  "Sonntag": {
     "name": "Sonntag",
     "open": "10",
     "close": "22"

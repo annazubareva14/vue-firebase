@@ -17,11 +17,10 @@
 
 <script setup>
 import OpenTimeItem from '@/components/OpenTimeItem.vue'
-import moment from 'moment'
-import momentDe from 'moment/min/moment-with-locales'
+import moment from 'moment/min/moment-with-locales'
 import { ref } from 'vue'
 
-momentDe.locale('de')
+moment.locale('de')
 
 const props = defineProps({
   openHours: Object
@@ -32,10 +31,9 @@ const nextOpen = ref(null)
 
 const setNextOpenDay = (isOpenSoon, isAlreadyClosed, weekday) => {
   const currentDay = moment().format('dddd')
-  const currentDayDe = momentDe().format('dddd')
   let day
 
-  if ((isOpenSoon || isAlreadyClosed) && weekday === currentDayDe) {
+  if ((isOpenSoon || isAlreadyClosed) && weekday === currentDay) {
     isClosed.value = true
   }
 

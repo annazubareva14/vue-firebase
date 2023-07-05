@@ -17,8 +17,10 @@
 </template>
 
 <script setup>
-import moment from 'moment'
+import moment from 'moment/min/moment-with-locales'
 import { computed } from 'vue'
+
+moment.locale('de')
 
 const props = defineProps({
   traffic: Object

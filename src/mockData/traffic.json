@@ -1,5 +1,5 @@
 {
-  "Monday": {
+  "Montag": {
     "10": "wenig",
     "11": "wenig",
     "12": "mittel",
@@ -13,7 +13,7 @@
     "20": "wenig",
     "21": "wenig"
   },
-  "Tuesday": {
+  "Dienstag": {
     "10": "wenig",
     "11": "wenig",
     "12": "mittel",
@@ -32,7 +32,7 @@
       "19": "wenig"
     }
   },
-  "Wednesday": {
+  "Mittwoch": {
     "10": "wenig",
     "11": "wenig",
     "12": "mittel",
@@ -46,7 +46,7 @@
     "20": "wenig",
     "21": "wenig"
   },
-  "Thursday": {
+  "Donnerstag": {
     "10": "wenig",
     "11": "wenig",
     "12": "mittel",
@@ -60,7 +60,7 @@
     "20": "wenig",
     "21": "wenig"
   },
-  "Friday": {
+  "Freitag": {
     "10": "wenig",
     "11": "wenig",
     "12": "mittel",
@@ -74,7 +74,7 @@
     "20": "wenig",
     "21": "wenig"
   },
-  "Saturday": {
+  "Samstag": {
     "10": "wenig",
     "11": "wenig",
     "12": "mittel",
@@ -88,7 +88,7 @@
     "20": "wenig",
     "21": "wenig"
   },
-  "Sunday": {
+  "Sonntag": {
     "10": "wenig",
     "11": "wenig",
     "12": "mittel",
