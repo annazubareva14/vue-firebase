@@ -47,6 +47,11 @@ const logout = async () => {
   background-color: #f0f8ff63;
   padding: 20px;
   border-radius: 30px;
-}
+  transition: all 0.3s ease-in-out;
 
+  &:hover {
+    padding: 25px;
+    background-color: #f0f8ff7a;
+  }
+}
 </style>

@@ -1,6 +1,6 @@
 import { reactive } from 'vue'
 import { defineStore } from 'pinia'
-import { auth } from '@/firebaseConfig'
+import { auth } from '@/plugins/firebaseConfig'
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -21,6 +21,8 @@ export const useAuth = defineStore('auth', () => {
       await setPersistence(auth, browserLocalPersistence)
 
       const response = await createUserWithEmailAndPassword(auth, email, password)
+      response.user.displayName = name
+      
       if (response) {
         user.data = response.user
         user.isLoggedIn = true
@@ -33,7 +35,7 @@ export const useAuth = defineStore('auth', () => {
   async function login({ email, password }) {
     try {
       await setPersistence(auth, browserLocalPersistence)
-      
+    
       const response = await signInWithEmailAndPassword(auth, email, password)
       if (response) {
         user.data = response.user
