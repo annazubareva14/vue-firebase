@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: ['moment/min/moment-with-locales'],
+      external: ['moment/min/moment-with-locales', 'axios'],
     },
   },
   resolve: {

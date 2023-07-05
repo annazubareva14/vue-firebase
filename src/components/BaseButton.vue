@@ -43,15 +43,17 @@ const emit = defineEmits(['click'])
   content: '';
   height: calc(100% + 3px);
   position: absolute;
-  right: -7px;
-  top: -9px;
-  transition: background-color 300ms ease-in;
+  right: -4px;
+  top: -6px;
+  transition: all 250ms ease-in;
   width: 100%;
   z-index: -1;
 }
 
 .base-button:hover:before {
   background-color: #6dcff6;
+  right: -7px;
+  top: -9px;
 }
 
 @media (min-width: 768px) {

@@ -13,7 +13,7 @@ import Header from '@/components/Header.vue'
 import CurrentWeather from '@/components/CurrentWeather.vue'
 import OpenTime from '@/components/OpenTime.vue'
 import Traffic from '@/components/Traffic.vue'
-import { onMounted } from 'vue'
+import { onMounted, onBeforeMount } from 'vue'
 import { useAuth } from '@/stores/auth.js'
 import { useWeather } from '@/stores/weather.js'
 import { storeToRefs } from 'pinia'
@@ -27,6 +27,10 @@ const storeAuth = useAuth()
 const storeWeather = useWeather()
 const { user } = storeToRefs(storeAuth)
 const { weather } = storeToRefs(storeWeather)
+
+onBeforeMount(() => {
+  storeAuth.fetchUser()
+})
 
 onMounted(async () => {
   await storeWeather.getWeatherData()

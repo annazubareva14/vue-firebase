@@ -5,8 +5,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  browserSessionPersistence,
-  setPersistence
+  browserLocalPersistence,
+  setPersistence,
+  onAuthStateChanged
 } from 'firebase/auth'
 
 export const useAuth = defineStore('auth', () => {
@@ -17,7 +18,7 @@ export const useAuth = defineStore('auth', () => {
 
   async function register({ name, email, password }) {
     try {
-      await setPersistence(auth, browserSessionPersistence)
+      await setPersistence(auth, browserLocalPersistence)
 
       const response = await createUserWithEmailAndPassword(auth, email, password)
       if (response) {
@@ -31,7 +32,8 @@ export const useAuth = defineStore('auth', () => {
 
   async function login({ email, password }) {
     try {
-      await setPersistence(auth, browserSessionPersistence)
+      await setPersistence(auth, browserLocalPersistence)
+      
       const response = await signInWithEmailAndPassword(auth, email, password)
       if (response) {
         user.data = response.user
@@ -47,5 +49,17 @@ export const useAuth = defineStore('auth', () => {
     user.data = null
   }
 
-  return { user, register, login, logout }
+  function fetchUser() {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        user.data = user
+        user.isLoggedIn = true
+      } else {
+        user.data = null
+        user.isLoggedIn = false
+      }
+    })
+  }
+
+  return { user, register, login, logout, fetchUser }
 })
