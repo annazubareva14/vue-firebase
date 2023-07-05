@@ -1,0 +1,11 @@
+import axios from 'axios'
+
+const instance = axios.create({
+  baseURL: import.meta.env.VITE_BASE_WEATHER_URL,
+  timeout: 1000,
+  validateStatus(status) {
+    return status < 400
+  }
+})
+
+export default instance

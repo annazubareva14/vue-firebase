@@ -1,0 +1,42 @@
+{
+  "Monday": {
+    "name": "Montag",
+    "open": "10",
+    "close": "22"
+  },
+  "Tuesday": {
+    "name": "Dienstag",
+    "open": "10",
+    "close": "22",
+    "changes": {
+      "message": "Da es heute regnet haben wir nur von 17 bis 19 Uhr geöffnet",
+      "open": "17",
+      "close": "19"
+    }
+  },
+  "Wednesday": {
+    "name": "Mittwoch",
+    "open": "10",
+    "close": "22"
+  },
+  "Thursday": {
+    "name": "Donnerstag",
+    "open": "10",
+    "close": "22"
+  },
+  "Friday": {
+    "name": "Freitag",
+    "open": "10",
+    "close": "22"
+  },
+  "Saturday": {
+    "name": "Samstag",
+    "open": "10",
+    "close": "22"
+  },
+  "Sunday": {
+    "name": "Sonntag",
+    "open": "10",
+    "close": "22"
+  }
+}
