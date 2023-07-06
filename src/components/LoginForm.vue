@@ -27,6 +27,8 @@
         />
       </div>
 
+      <div v-show="error" class="login-form__error">{{ error }}</div>
+
       <div class="login-form__buttons">
         <BaseButton
           type="submit"
@@ -102,6 +104,14 @@ const emit = defineEmits(['update:name', 'update:email', 'update:password', 'sub
       top: -12px;
       font-size: 12px;
     }
+  }
+
+  &__error {
+    margin: -20px 0 10px 0;
+    font-weight: 600;
+    color: red;
+    font-size: 16px;
+    max-width: 300px;
   }
 
   &__buttons {
